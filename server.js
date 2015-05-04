@@ -95,7 +95,7 @@ app.get('/:collection/:entity', function(req, res){
 	}
 });
 
-app.post('/:colleciton', function(req, res){
+app.post('/:collection', function(req, res){
 	var object = req.body;
 	var collection = req.params.collection;
 	collectionDriver.save(collection, object, function(err, docs){
@@ -104,7 +104,7 @@ app.post('/:colleciton', function(req, res){
 	});
 });
 
-app.put('/:colleciton/:entity', function(req, res){
+app.put('/:collection/:entity', function(req, res){
 	var params = req.params;
 	var entity = params.entity;
 	var collection = params.collection;
